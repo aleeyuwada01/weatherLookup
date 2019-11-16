@@ -1,0 +1,47 @@
+body {
+    background: rgba($color-primary, .015);
+}
+
+.terms {
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+    position: relative;
+    color: $color-black;
+    z-index: 1;
+
+    h1 {
+        color: $color-grey;
+        font-size: 3.5rem;
+        text-align: center;
+        font-weight: 300;
+        display: block;
+        margin-top: -16rem;
+    }
+}
+
+.section-terms {
+    position: relative;
+    background: $color-white;
+    border-radius: .5rem;
+    width: 50%;
+    font-size: 1.4rem;
+    line-height: 1.7;
+    letter-spacing: 1px;
+    padding: 2.5rem 2rem;
+    border: 1px solid lighten($color-grey, 20%);
+    z-index: 10;
+    margin: auto;
+    margin-top: -30rem;
+    text-align: justify;
+
+    &__pre {
+        white-space: pre-line;
+     }
+
+    @include respond(tab-port) {
+        width: 75%;
+    }
+
+    @include respond(phone) {
+        width: 85%;
+    }
+}

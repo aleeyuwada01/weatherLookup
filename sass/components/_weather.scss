@@ -1,0 +1,202 @@
+.weather {
+    max-width: 35rem;
+    //height: 45rem;
+    background: $color-grey;
+    border-radius: 6px;
+    flex-basis: 35rem;
+    overflow: hidden;
+    color: $color-white;
+    position: relative;
+
+    &__bg {
+        width: 100%;
+        height: 28rem;
+        background: url(../../img/weather-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        padding-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__condition {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    &__location {
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: 1.5rem;
+    }
+
+    &__deg {
+        font-size: 6rem;
+        margin: 0 0 0 0;
+        padding: 0;
+    }
+
+    ul {
+        color: lighten($color-black, 17%);
+
+        li {
+            padding: 1rem 2.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .nm {
+            color: rgb(150, 148, 148);
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 3px;
+                left: 18px;
+                width: 15%;
+                height: 2px;
+                background-color: rgb(150, 148, 148);
+            }
+        }
+    }
+
+    &__settings-con {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    &__settings-icon {
+        display: none;
+    }
+
+    &__settings-icon:checked~.settings {
+        transform: translateX(0);
+    }
+
+    .settings {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: $color-white;
+        display: block;
+        transform: translateX(-35rem);
+        transition: .45s cubic-bezier(1, 0, 0, 1);
+
+        &__change-location {
+            padding-top: 2.5rem;
+            text-align: center;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        &__bg {
+            width: 100%;
+            height: 25rem;
+            background: linear-gradient(168deg, rgba($color-primary, .75) 70%, $color-white 70%), url(../../img/settings-bg.jpg);
+            background-size: cover;
+            position: relative;
+        }
+
+        &__bg-img {
+            width: 13rem;
+            height: 13rem;
+            background: $color-white;
+            border: 4px solid $color-primary;
+            border-radius: 50%;
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $color-primary;
+        }
+
+        &__form {
+            color: $color-black;
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .label-input {
+            position: relative;
+            width: 85%;
+            display: inline-block;
+        }
+
+        &__input {
+            width: 100%;
+            border-radius: 6px;
+            padding: 1.5rem 2rem;
+            border: none;
+            border: 1px solid #ddd;
+            display: block;
+            margin: auto;
+            font-size: 1.6rem;
+            color: rgb(119, 119, 119);
+            margin-bottom: 2rem;
+            box-sizing: border-box;
+
+            &:focus {
+                border: none;
+                outline: none;
+                border: 1px solid $color-primary;
+                box-shadow: 0 0 10px -4px rgba($color-primary, .65);
+            }
+        }
+
+        &__save {
+            width: 85%;
+            padding: 1rem 2rem;
+            border: none;
+            background: $color-primary;
+            color: $color-white;
+            box-sizing: border-box;
+            font-size: 1.6rem;
+            border-radius: 6px;
+
+            &:hover {
+                background-color: darken($color-primary, 6%);
+            }
+        }
+    }
+
+    &__label {
+        width: 3rem;
+        height: 3rem;
+        background: transparent;
+        display: block;
+        position: relative;
+    }
+
+    &__label-2 {
+        width: 3rem;
+        height: 3rem;
+        background: transparent;
+        display: block;
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        z-index: 10;
+    }
+
+    &__cog {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}

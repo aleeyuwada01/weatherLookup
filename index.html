@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Lookup</title>
+    <link rel="shortcut icon" type="img/png" href="img/icon-01.png">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Google+Sans:400,500|Open+Sans:300,400,600,700,800">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav__brand-con">
+            <a href="#" class="nav__link nav__brand">Weather-Lookup</a>
+        </div>
+        <label for="navBtn" class="nav__mobile">
+            <span class="bars"></span>
+        </label>
+        <input type="checkbox" id="navBtn" class="checkbox">
+        <div class="nav__link-con">
+            <a href="index.html" class="nav__link">HOME</a>
+            <a href="terms.html" class="nav__link">TERMS</a>
+            <a href="#weather" class="nav__link">WEATHER NOW</a>
+            <a href="#features" class="nav__link">FEATURES</a>
+            <a href="https://github.com/aleeyuwada01/WeatherLookUp" target="_blank" class="nav__link">OPEN SOURCE</a>
+        </div>
+    </nav>
+    <header class="header">
+        <h1 class="heading-primary">Weather Lookup, The App that understands you.
+        </h1>
+        <p class="header__desc">Weather Lookup Helps you keep tracks of weather changes irrespective of your Location.
+        </p>
+        <div class="btn-group">
+            <a href="#features" class="btn btn--remember">Our Features</a><a href="#weather"
+                class="btn btn--now">Weather now</a>
+        </div>
+    </header>
+    <section id="features" class="features c">
+        <div class="features__col-1">
+            <h1 class="features__heading">Features</h1>
+            <h2 class="features__heading--sub">Some Features of the weather Lookup</h2>
+            <p class="features__desc">We make sure our core features are upto standard</p>
+        </div>
+        <div class="features__col-2">
+            <div class="features__box features__box--1">
+                <div class="features__icon features__icon--1">1</div>
+                <h2 class="features__heading--tertiary features__heading--tertiary--1">Accurate Forcast</h2>
+                <p class="features__desc--2">All the data is processed by <a
+                        href="http://openweathermap.org">openweathermap</a> In a way that it attempts to provide
+                    accurate online weather forcast data and weather maps.</p>
+            </div>
+            <div class="features__box features__box--2">
+                <div class="features__icon features__icon--2">2</div>
+                <h2 class="features__heading--tertiary features__heading--tertiary--2">Changes Notifications</h2>
+                <p class="features__desc--2">It automatically updates the condition of all the cities. This happens
+                    because Weather Lookup uses an openweathermap api which gets its information from difffrent
+                    databases around the world.</p>
+            </div>
+            <div class="features__box features__box--1">
+                <div class="features__icon features__icon--3">3</div>
+                <h2 class="features__heading--tertiary features__heading--tertiary--3">All cities</h2>
+                <p class="features__desc--3">The openweathermap Api provides all cities all across the globe
+                    irrespective of your location with Accurate data, it uses current satelite location.</p>
+            </div>
+        </div>
+    </section>
+    <section id="weather" class="weather-con">
+        <div class="weather sh-sm">
+            <div class="weather__settings-con">
+                <label class="weather__label" for="settings">
+                    <img src="img/cog-solid.svg" alt="settings icon" title="settings" class="weather__cog">
+                </label>
+            </div>
+            <figure id="output">
+                <div class="weather__bg">
+                    <img src="" class="weather__condition sh-txt" alt="No internet connection">
+                    <h4 class="weather__location sh-txt"></h4>
+                    <h1 class="weather__deg sh-txt"></h1>
+                </div>
+                <figcaption>
+                    <ul>
+                        <li class="nm">
+                            <span>Name:</span>
+                            <span class="w-name"></span>
+                        </li>
+                        <li>
+                            <span>Wind:</span>
+                            <span class="w-wind-speed"></span>
+                        </li>
+                        <li>
+                            <span>Cloudiness:</span>
+                            <span class="w-cloud"></span>
+                        </li>
+                        <li>
+                            <span>Humidity:</span>
+                            <span class="w-humidity"></span>
+                        </li>
+                        <li>
+                            <span>Geo coords:</span>
+                            <span class="w-coords"></span>
+                        </li>
+                    </ul>
+                </figcaption>
+            </figure>
+            <input type="checkbox" id="settings" class="weather__settings-icon">
+            <div class="settings">
+                <label class="weather__label-2" for="settings">
+                    <img src="img/arrow-alt-circle-left-regular.svg" alt="settings icon" title="Home"
+                        class="weather__cog">
+                </label>
+                <div class="settings__bg">
+                    <h3 class="settings__change-location">Change Location</h3>
+                    <div class="settings__bg-img">
+                        <h1 class="user" style="text-transform: uppercase;">A</h1>
+                    </div>
+                </div>
+                <form class="settings__form">
+                    <label class="label-input" for="name">
+                        <input type="text" id="name" class="settings__input-name settings__input"
+                            placeholder="Full name">
+                    </label>
+                    <label class="label-input" for="location">
+                        <input type="text" id="location" class="settings__input-location settings__input"
+                            placeholder="Location eg(Katsina)">
+                    </label>
+                    <button class="settings__save">save settings</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="footer" dir="ltr">
+        <p>
+            Copyright &copy; 2019 Weather-Lookup
+            <a href="https://github.com/aleeyuwada01/WeatherLookUp" target="_blank">Open source</a>
+        </p>
+        <p>
+            <b>Version 1.0.0</b>
+            <a href="terms.html">Terms</a>
+        </p>
+    </footer>
+    <script src="js/storage.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

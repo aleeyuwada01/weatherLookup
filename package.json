@@ -1,0 +1,20 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "Weather Lookup Helps you keep tracks of weather changes irrespective your Location.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  },
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "keywords": [
+    "Weather",
+    "weather",
+    "app"
+  ],
+  "author": "aliyu wada",
+  "license": "ISC"
+}

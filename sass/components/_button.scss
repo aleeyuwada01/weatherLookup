@@ -1,0 +1,44 @@
+.btn-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    background-color: red;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.55rem;
+    text-decoration: none;
+    color: $color-white;
+    font-weight: 400;
+
+    &--remember {
+        background-color: $color-grey;
+        color: $color-secondary;
+        border: 2px solid transparent;
+
+        &:hover {
+            border: 2px solid $color-grey;
+            background-color: transparent;
+            color: $color-grey;
+        }
+    }
+
+    &--now {
+        background-color: $color-tertiary;
+        margin-left: 1rem;
+        border: 2px solid transparent;
+
+        &:hover {
+            border: 2px solid $color-tertiary;
+            background-color: $color-grey;
+            color: darken($color-tertiary, 10%);
+        }
+    }
+
+    @include respond(phone) {
+        font-size: 1.4rem;
+        padding: 1rem 2rem;
+    }
+}
